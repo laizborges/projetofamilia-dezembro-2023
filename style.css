@@ -1,0 +1,445 @@
+@charset "utf-8";
+@font-face {
+    font-family: font1;
+    src: url(fontes/Gilroy-ExtraBold.otf);
+}
+@font-face {
+    font-family: font2;
+    src: url(fontes/Montserrat-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+:root{
+    --paleta-cor1:#eee;
+    --paleta-cor2:#64CCC5;
+    --paleta-cor3:#176B87;
+    --paleta-cor4:#053B50;
+}
+/* Fontes passadas pelo Guilherme. Ver se será adicionado definitivamente dps */
+/* @font-face{
+    font-family: Montserrat; 
+    src:url(Fontes/Montserrat-Regular.ttf)
+}
+
+@font-face{
+    font-family: Gilroy;
+    src:url(Fontes/Gilroy-ExtraBold.otf) 
+} */
+body{
+    background-color: var(--paleta-cor1);
+}
+/*---------------- header -----------------------*/
+.header{
+    background-color: #053b50;
+    color: aliceblue;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding-top: 15px;
+}
+.logo img{
+    width: 150px;
+    height: 150px;
+}
+.nome{
+    justify-self:start;
+}
+
+.nome h2{
+    color:white;
+}
+
+H2{
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.1em;
+}
+header img {
+    width: 450px;
+}
+/*---------------- header -----------------------*/
+/*---------------- carrossel -----------------------*/
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.carrossel {
+    overflow: hidden;
+    width: 60%;
+    height: 8%;
+    margin-top: 4%;
+    margin-left: 21%;
+    border-radius: 8px;
+}
+.imagens {
+    display: flex;
+    width: 200%;
+    height: 100%;
+}
+.imagens img {
+    width: 100%;
+    height: 100%;
+}
+.imagem {
+    transition: 1s ease;
+    width: 50%;
+}
+input {
+    display: none;
+}
+.navegacao {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    translate: -50%;
+    left: 50%;
+    bottom: -30px;
+    gap: 10px;
+}
+.bar {
+    background-color: #176B87;
+    margin-left: 10px;
+    height: 15px;
+    width: 35px;
+    border-radius: 5px;
+    transition: 1s ease;
+    cursor: pointer;
+}
+.bar:hover {
+    background-color: #64CCC5;
+}
+#imagem1:checked~.img1 {
+    margin-left: 0;
+}
+#imagem2:checked~.img1 {
+    margin-left: -50%;
+}
+/*---------------- carrossel --------------------*/
+/*---------------- Empresa/Sobre/início ----------------*/
+
+.empresa-boas-vindas{
+    width: 100%;
+    height: auto;
+    padding: 50px;
+
+}
+
+.empresa-boas-vindas-content{
+    width: 700px;
+    margin-left: 50%;
+    font-size: 40px;
+    text-indent: 50px;
+    text-align: justify;
+    transform: translate(-50%);
+    padding: 10px;
+}
+
+.empresa-section{
+    width: 100%;
+    height: 300px;
+    padding: 50px;
+    background:linear-gradient(to right, #053B50, #176B87);
+    margin: 40px 0px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.empresa-section-content{
+    width: 500px;
+    height: 200px;
+    font-size: 20px;
+    text-indent: 50px;
+    text-align: justify;
+    animation: spawning-left ;
+    animation-timeline: view();
+    animation-range: cover 0% cover 60%;
+}
+
+.empresa-section:nth-child(3) > .empresa-section-content{
+    width: 500px;
+    height: 200px;
+    font-size: 20px;
+    text-indent: 50px;
+    text-align: justify;
+    animation:spawning-right ;
+    animation-timeline: view();
+    animation-range: cover 0% cover 60%;
+}
+
+
+.empresa-boas-vindas h1, .empresa-section-content h2{
+    font-family: font1;
+    text-align: center;
+    width: auto;
+    color: #1288af;
+    padding: 10px;
+}
+
+.empresa-boas-vindas p, .empresa-section-content p{
+    font-family: font2;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.empresa-boas-vindas p span, .empresa-section-content p span{
+    font-family: font2;
+    color: #1288af;
+    text-shadow: 0px 0px 0px black;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+
+
+.empresa-sobre .empresa-section{
+    display: grid;
+    grid-template-columns: 100vh 100vh;
+    grid-template-rows: 50vh;
+}
+/*---------------- Empresa/Sobre/fim ----------------*/
+/*---------------- colaboradores ----------------*/
+.colaboradores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+}
+.colaboradores h2{
+    margin-bottom: 45px;
+    font-family: font1;
+}
+
+.colaboradores h2 span{
+    margin-bottom: 45px;
+    font-family: font1;
+    color: #176B87;
+}
+
+.colaboradores-imagem-grupo{
+    width: 80%;
+    margin-bottom: 60px;
+    border-radius: 5px;
+}
+.integrantes{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 30px;
+}
+.colaboradores-imagem{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.membro{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    text-decoration: none;
+    transition: .35s;
+}
+
+.membro h3{
+    text-align: center;
+    color: white;
+    padding-top: 75px;
+    transform: translate(0%, -15%);
+    display: none;
+    transition:ease all 2s;
+    transition: .35s;
+}
+
+.membro:hover{
+    filter: brightness(70%);
+    transform: scale(1.1);
+}
+
+.membro:hover > h3{
+    display: block;
+}
+
+.membro1{
+    background-image: url(laizfotos/laizfoto.heic);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.membro2{
+    background-image: url(imgs/Delson.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.membro3{
+    background-image: url(imgs/gi-foto.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.membro4{
+    background-image: url(imgs/foto-minha-ricardo.jpg);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: center;
+}
+
+.membro5{
+    background-image: url(imgs/reiscrazy3.jpeg);
+    background-repeat: no-repeat;
+    background-position: 0px -20px;
+    background-size:cover;
+}
+
+.membro6{
+    background-image: url(imgs/israel_moeda.png);
+    background-repeat: no-repeat;
+    background-size:200px;
+    background-position: center;
+}
+
+.card h3{
+    font-family:font1 ; 
+}
+
+.card p{
+    font-family:font2 ;
+}
+
+.colaboradores-imagem img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colaboradores-imagem img:hover{
+    animation: slide-fwd-center .5s;
+    
+}
+.colaboradores-imagem .card{
+    width: 200px;
+}
+.colaboradores-imagem .card header{
+    text-align: left;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.colaboradores-imagem .card p{
+    text-align: left;
+}
+
+.colaboradores-imagem a{
+    text-decoration: none;
+}
+/*---------------- colaboradores -----------------------*/
+/*---------------- quem somos -----------------------*/
+/* .image{
+    filter: brightness(40%);
+}
+.text{
+    display: flex;
+    color: aliceblue;
+    position: relative;
+    font-family: Gilroy;
+    margin-top: -500px;
+    margin-left: 30px;
+}
+.subtext{
+    display: flex;
+    position: absolute;
+    color: aliceblue;
+    margin-top: 10px;
+    margin-left: 30px;
+    font-family: Montserrat;   
+} */
+/*---------------- footer -----------------------*/
+
+footer{
+    background-color:#053B50;
+    height: 180px;
+    display: grid;
+    grid-template-columns: 10px auto;
+}
+.ficons{
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.fotfooter img{
+    height: 90px;
+    width: 100px;
+    margin: 10px;
+}
+
+footer p {
+    align-self: start;
+    margin-top: 60px;
+    color: #fff;
+    font-family: font2;
+    padding: 5px;
+}
+footer b{
+    color: #fff;
+    font-family: font2;
+}
+
+
+.redes{
+    margin-left: 160px;
+    margin-top: 27px;
+}
+.icon1{
+    height: 40px;
+    width: 50px;   
+}
+
+.icon1:hover, .icon2:hover, .icon3:hover{
+    transform: scale(1.1);
+    transition: .35s;
+}
+
+.icon2{
+    height: 45px;
+    width: 70px;
+}
+
+.icon3{
+    height: 40px;
+    width: 50px;
+}
+
+
+/*---------------- footer -----------------------*/
+
+@keyframes spawning-left {
+   from{
+        transform: translateX(100vh);
+        color: transparent;
+        opacity: 0%;
+   } 
+   to{
+        transform: translateX(0vh);
+        opacity: 100%;
+   }
+}
+
+@keyframes spawning-right {
+    from{
+         transform: translateX(-100vh);
+         color: transparent;
+         opacity: 0%;
+    } 
+    to{
+         transform: translateX(0vh);
+         opacity: 100%;
+    }
+ }

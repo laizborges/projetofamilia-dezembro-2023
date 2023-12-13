@@ -1,0 +1,359 @@
+@charset "utf-8";
+@font-face {
+    font-family: font1;
+    src: url(fontes/Gilroy-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(fontes/Montserrat-Light.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.header{
+    background-color: #053b50;
+    color: aliceblue;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding-top: 15px;
+}
+
+.logo img{
+    width: 150px;
+    height: 150px;
+}
+
+.nome{
+    justify-self:start;
+}
+
+header h2{
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+header img {
+    width: 450px;
+}
+
+.foto{
+    margin-left: 50%;
+    transform: translate(-45%);
+    border-radius: 100%;
+}
+
+.foto img{
+    border-radius: 10px;
+    width: 625px;
+}
+
+#foto-minha{
+    margin-left: 50%;
+    transform: translate(-45%);
+    border-radius: 100%;
+    border-radius: 10px;
+    width: 625px;
+}
+
+#foto-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-58%, -50%);
+    width: 400px;
+    text-align: justify;
+    animation: blur  alternate-reverse ease-in;
+    animation-timeline: view();
+    animation-range: cover 0% cover 60%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-indent: 40px;
+    color: #f1f1f1;
+    text-shadow: 0px 0px 5px black;
+}
+
+#foto-text h1, #foto-text h4{
+    text-align: center;
+    padding: 10px;
+    font-family: font1;
+}
+
+#foto-text p{
+    font-family: font2;
+    font-weight: 800;
+
+}
+
+body{
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+}
+
+.apresentation div{
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+.apresentation img{
+    margin-left: 50%;
+}
+
+.apresentation span{
+    color: #053B50;
+}
+
+.apresentation h1{
+    color: #176B87;
+    font-size: 50px; 
+    font-family: font1;
+}
+
+.family div h1{
+    margin-left: 50%;
+    transform: translate(-50%);
+    color: #053B50;
+    font-size: 50px; 
+    white-space: nowrap;
+    overflow: hidden;
+    width: 535px;
+    animation: typing steps(20);
+    animation-timeline: view();
+    animation-range: cover 0 cover 40%;
+    font-family: font1;
+}
+
+.family h4{
+    text-align: center;
+    color: #176B87;
+    font-size: 20px;
+    font-family: font1;
+}
+
+.family-member{
+    display: grid;
+    grid-template-columns: 100vh 100vh;
+    grid-template-rows: 100vh;
+    gap: 1em;
+    padding: 25px;
+}
+
+.family-value{
+    display: grid;
+    grid-template-columns: 33.3333333333% 33.3333333333% 33.3333333333%;
+    grid-template-rows: 60vh;
+    gap: 1em;
+    padding: 25px;
+}
+
+.family-value div{
+    width: 300px ;
+    left: 50%;
+    height:300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px #053b50;
+}
+
+.family-value div:nth-child(1){
+    background-image: url(imgs/family-value-foto1-ricardo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.family-value div:nth-child(2){
+    background-image: url(imgs/family-value-foto2-ricardo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.family-value div:nth-child(3){
+    background-image: url(imgs/family-value-foto3-ricardo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.family-value div p{
+    font-family: font2;
+    text-indent: 20px;
+    width: 100%;
+    text-align: justify;
+    font-size: 25px;
+    padding-top: 10px;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+
+.family div h2{
+    text-align: center;
+    font-family: font1;
+    color: #176B87;
+}
+
+
+.family-value div h2{
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+
+#membro1{
+    background-image: url(imgs/familia-mae-ricardo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    margin: 20px;
+    box-shadow: 2px 2px 3px black;
+
+}
+
+#membro2{
+    background-image: url(imgs/familia-irmao-ricardo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px ;
+    border-radius: 100%;
+    margin-right: 50px;
+    box-shadow: -2px 2px 3px black;
+}
+
+#membro3{
+    background-image: url(imgs/familia-pai-ricardo.jpg);
+    background-size: cover;
+    background-position: 0px -150px;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    margin: 20px;
+    box-shadow: 2px 2px 3px black;
+}
+
+#membro-text{
+    margin: auto auto;
+    text-align: justify;
+    width: 500px;
+    color: black;
+    animation: entrando 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 40%;
+    border-bottom: 2px solid #053b50;
+    font-family: font2;
+}
+
+#membro-text h2, #membro-text p{
+    animation: entrando 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 40%;
+}
+
+#membro-text h2{
+    text-align: center;
+}
+
+#membro-text p{
+    text-indent: 50px;
+    padding: 10px;
+}
+
+
+header img {
+    width: 450px;
+}
+
+#icon-seta{
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 5px;
+}
+
+footer{
+    background-color:#053B50;
+    height: 200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10px auto;
+}
+.ficons{
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.fotfooter img{
+    height: 90px;
+    width: 100px;
+    padding: 10px;
+}
+
+footer p {
+    align-self: start;
+    margin-top: 60px;
+    color: #fff;
+    font-family: font2;
+
+}
+.redes{
+    margin-left: 160px;
+  margin-top: 27px;
+}
+.img1 {
+    height: 40px;
+    width: 50px;   
+}
+.img2 {
+    height: 45px;
+    width: 70px;
+}
+ .img3 {
+    height: 40px;
+    width: 50px;
+}
+
+.img1:hover, .img2:hover, .img3:hover{
+    transform: scale(1.1);
+    transition: .35s;
+}
+
+@keyframes entrando {
+    from{
+        color: transparent;
+        transform: translateY(-5vh);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+}
+
+@keyframes blur {
+    from{
+        backdrop-filter: blur(0px);
+    }
+    to{
+        backdrop-filter: blur(40px);
+    }
+}
+
+@keyframes showing {
+    from{
+        display: none;
+    }
+    to{
+        display: block;
+    }
+}

@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(Fontes/Montserrat-Regular.ttf)
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(Fontes/Gilroy-ExtraBold.otf)
+}
+
+body {
+    background-color: #56afa9;
+}
+
+/*---------------- header -----------------------*/
+.header {
+    background-color: #053b50;
+    color: aliceblue;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+}
+
+.nome {
+    justify-self: start;
+}
+
+H2 {
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+header img {
+    width: 450px;
+}
+
+/*---------------- header -----------------------*/
+/*---------------- footer -----------------------*/
+
+footer {
+    background-color: #053B50;
+    height: 160px;
+    display: grid;
+    grid-template-columns: 10px auto;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.ficons {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.fotfooter img {
+    height: 90px;
+    width: 100px;
+}
+
+footer p {
+    align-self: start;
+    margin-top: 60px;
+    color: #fff;
+}
+
+.redes {
+    margin-left: 160px;
+    margin-top: 27px;
+}
+
+.img7 {
+    height: 40px;
+    width: 50px;
+}
+
+.img8 {
+    height: 45px;
+    width: 70px;
+}
+
+.img9 {
+    height: 40px;
+    width: 50px;
+}
+
+/*---------------- footer -----------------------*/
+/*------------------pagina individual----------- */
+h1 {
+    text-align: center;
+    font-size: 200%;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.foto {
+    flex-direction: column;
+    display: flex;
+    margin: 40px;
+
+
+}
+
+.foto img {
+    width: 250px;
+    height: 250px;
+    border-radius: 3%;
+    margin-left: 40%;
+
+
+}
+
+p {
+    
+    color: rgb(200, 226, 236);
+    font-size: 120%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+
+
+}
+
+span {
+    color: aliceblue;
+}
+
+.fotos1 {
+    display: flex;
+    gap: 15px;
+    padding-left: 40px;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+
+}
+
+.fotos1 img {
+    width: 185px;
+    height: 250px;
+    border-radius: 3%;
+}
+
+.fotos1 p {
+    width: 500px;
+    text-align: justify;
+}
+
+h1 {
+    font: family font 1px;
+    text-align: center;
+    color: rgb(250, 250, 250);
+    font-size: 300%;
+
+}
+
+.fotinhos {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin-left: 18%;
+    gap: 20%;
+    margin-top: 60px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+
+}
+
+.fotinhos img {
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #053B50;
+    
+}
+
+.texto {
+    font-size: 120%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: beige;
+}
+
+.img7:hover,
+.img8:hover,
+.img9:hover {
+    transform: scale(1.1);
+    transition: .35s;
+}

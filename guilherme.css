@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+@font-face{
+    font-family: Montserrat; 
+    src:url(fontes/Montserrat-Regular.ttf)
+}
+
+@font-face{
+    font-family: Gilroy;
+    src:url(fontes/Gilroy-ExtraBold.otf)
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(234, 245, 255);
+
+}
+
+
+ /* header momento */
+ .header{
+    background-color: #053b50;
+    color: aliceblue;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding-top: 15px;
+}
+.logo img{
+    width: 150px;
+    height: 150px;
+}
+.nome{
+    justify-self:start;
+}
+H2{
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.1em;
+}
+header img {
+    width: 450px;
+}
+
+.myself{
+    margin: 30px;
+    background-color: #053B50;
+    border-radius: 20px;
+}
+
+.myselftext{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 140px;
+    color: #f0f8ff;
+    font-family: Gilroy;
+
+}
+
+
+
+.myselfimage{
+    display: flex;
+    color: aliceblue;
+    font-family: Montserrat;
+}
+
+
+
+.myselfimage img{
+    height: 450px;
+    width: 500px;
+    border-radius: 400px;
+    background-color: #002736;
+    
+}
+.moremyselftext{
+    padding: 30px;
+    margin-bottom: -60px;
+    margin-left: 60px;
+    font-family: Gilroy;
+}
+
+.moremyselfimg{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 30px;
+    color: #f0f8ff;
+    background-color: #053B50;
+    border-radius: 20px;
+    font-family: Montserrat;
+    padding: 30px;
+    
+
+}
+
+.moremyselfimg img{
+    border-radius: 200px;
+    height: 200px;
+    width: 300px;
+
+}
+
+
+.others{
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+    background-color: #053B50;
+    border-radius: 40px;
+    color: aliceblue;
+    font-family: montserrat;
+    
+}
+
+
+.others img{
+    width:400px;
+    height:500px;
+    margin: 50px;
+    border-radius: 900px;
+    background-color: #002736;
+}
+
+.otherstext{
+    font-family: gilroy;
+
+}
+
+.container{
+    margin: 50px;
+    padding:10px;
+    font-family: montserrat;
+    text-align: center;
+
+}
+
+/*o paralax aqui */
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75vh !important;
+    overflow: hidden;
+    position: relative;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+color: #000000;
+text-shadow: 7px 7px 7px #131111;
+text-align: center;
+font-size: 75px;
+z-index: 100;
+font-family: gilroy;
+}
+
+section.modulo.parallax:after{
+    content:"";
+    height:100%;
+    width:100%;
+    position:absolute;
+    z-index: 10;
+
+}
+
+
+
+
+section.modulo.parallax-1{
+    background-position: fixed;
+background-image: url("imgs/mae5reis.jpg")
+
+}
+
+/*fim da parte do paralax */
+
+
+
+
+
+/* footer da empresa */
+
+
+footer{
+    background-color:#053B50;
+    height: 160px;
+    display: grid;
+    grid-template-columns: 10px auto;
+}
+.ficons{
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.fotfooter img{
+    height: 90px;
+    width: 100px;
+}
+
+footer p {
+    align-self: start;
+    margin-top: 60px;
+    color: #fff;
+    font-family: font1;
+}
+.redes{
+    margin-left: 160px;
+  margin-top: 27px;
+}
+.img1 {
+    height: 40px;
+    width: 50px;   
+}
+.img2 {
+    height: 45px;
+    width: 70px;
+}
+ .img3 {
+    height: 40px;
+    width: 50px;
+}
+
+.img1:hover, .img2:hover, .img3:hover{
+    transform: scale(1.1);
+    transition: .35s;
+}
